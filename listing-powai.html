@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NexSpace Realty</title>
+  <meta name="description" content="NexSpace Realty commercial real estate advisory across India." />
+  <meta property="og:site_name" content="NexSpace Realty" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="NexSpace Realty" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .listing-hero { padding: 0; background: none; box-shadow: none; }
+    .listing-gallery { position: relative; width: 100%; height: 520px; overflow: hidden; border-radius: 26px; }
+    .listing-gallery .gallery-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.6s ease; }
+    .listing-gallery .gallery-slide.is-active { opacity: 1; }
+    .listing-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); pointer-events: none; }
+    .gallery-title { position: absolute; bottom: 50px; left: 40px; font-family: "Playfair Display", serif; font-size: 2.8rem; color: white; text-shadow: 0 2px 20px rgba(0,0,0,0.4); transition: opacity 0.5s ease; }
+    .gallery-title.is-fading { opacity: 0; }
+    .gallery-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; width: 44px; height: 44px; color: white; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s ease; }
+    .gallery-arrow:hover { background: rgba(255,255,255,0.35); }
+    .gallery-arrow.prev { left: 20px; }
+    .gallery-arrow.next { right: 20px; }
+    .gallery-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+    .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5); border: none; cursor: pointer; transition: 0.3s ease; }
+    .gallery-dot.is-active { background: white; width: 24px; border-radius: 4px; }
+    .listing-hero-meta { padding: 32px 48px 0; display: grid; gap: 12px; }
+    @media (max-width: 700px) {
+      .gallery-title { font-size: 2rem; left: 20px; bottom: 30px; }
+      .listing-hero-meta { padding: 24px 20px 0; }
+    }
+  </style>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <div class="logo">NexSpace Realty</div>
+      <nav class="nav-links">
+        <a href="search.html">Search</a>
+        <a href="agents.html">Agents</a>
+        <a href="join.html">Join</a>
+        <a href="paperwork.html">Paperwork</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <a class="btn ghost" href="contact.html">Sign In</a>
+    </header>
+
+    <section class="page-hero listing-hero">
+      <div class="listing-gallery">
+        <div class="gallery-slide is-active">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" alt="Powai Tech Park Unit" loading="lazy" />
+        </div>
+        <div class="gallery-slide">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200" alt="Powai Tech Park Unit" loading="lazy" />
+        </div>
+        <div class="gallery-slide">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200" alt="Powai Tech Park Unit" loading="lazy" />
+        </div>
+        <div class="gallery-slide">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200" alt="Powai Tech Park Unit" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-title">Powai Tech Park Unit</div>
+        <button class="gallery-arrow prev" aria-label="Previous slide">‹</button>
+        <button class="gallery-arrow next" aria-label="Next slide">›</button>
+        <div class="gallery-dots">
+          <button class="gallery-dot" aria-label="Slide 1"></button>
+          <button class="gallery-dot" aria-label="Slide 2"></button>
+          <button class="gallery-dot" aria-label="Slide 3"></button>
+          <button class="gallery-dot" aria-label="Slide 4"></button>
+        </div>
+      </div>
+      <div class="listing-hero-meta">
+        <p class="eyebrow">Listing</p>
+        <p>₹1.6 Cr · 3,000 sq ft · IT/ITES Space</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="schedule.html">Schedule a Tour</a>
+          <a class="btn outline" href="contact.html">Request Info</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card tilt">
+        <h3>Highlights</h3>
+        <p>Ready-to-move tech park unit with dedicated parking and high-speed fibre connectivity.</p>
+      </article>
+      <article class="card tilt">
+        <h3>Location</h3>
+        <p>Powai, Mumbai near major campuses and corporate hubs.</p>
+      </article>
+      <article class="card tilt">
+        <h3>Facilities</h3>
+        <p>24x7 security, access control, and visitor management.</p>
+      </article>
+      <article class="card tilt">
+        <h3>Agent</h3>
+        <p>Rajiv Malhotra · 14 yrs · Mumbai Office</p>
+        <a href="agents.html">View Agent Profile</a>
+      </article>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const gallery = document.querySelector('.listing-gallery');
+      if (!gallery) return;
+      const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
+      const title = gallery.querySelector('.gallery-title');
+      const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
+      const prev = gallery.querySelector('.gallery-arrow.prev');
+      const next = gallery.querySelector('.gallery-arrow.next');
+      let index = 0;
+      let timer;
+
+      const restart = () => {
+        clearInterval(timer);
+        timer = setInterval(() => setActive(index + 1, false), 5000);
+      };
+
+      const setActive = (newIndex, manual) => {
+        const total = slides.length;
+        const nextIndex = (newIndex + total) % total;
+        if (nextIndex === index) return;
+        title.classList.add('is-fading');
+        setTimeout(() => {
+          slides[index].classList.remove('is-active');
+          dots[index].classList.remove('is-active');
+          index = nextIndex;
+          slides[index].classList.add('is-active');
+          dots[index].classList.add('is-active');
+          setTimeout(() => title.classList.remove('is-fading'), 600);
+        }, 500);
+        if (manual) restart();
+      };
+
+      prev.addEventListener('click', () => setActive(index - 1, true));
+      next.addEventListener('click', () => setActive(index + 1, true));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => setActive(i, true)));
+
+      let startX = null;
+      gallery.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+      gallery.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        const endX = e.changedTouches[0].clientX;
+        const delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta > 0) setActive(index - 1, true);
+          else setActive(index + 1, true);
+        }
+        startX = null;
+      });
+
+      slides[0].classList.add('is-active');
+      dots[0].classList.add('is-active');
+      timer = setInterval(() => setActive(index + 1, false), 5000);
+    })();
+  </script>
+</body>
+</html>
